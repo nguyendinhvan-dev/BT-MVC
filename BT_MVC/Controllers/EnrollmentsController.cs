@@ -49,8 +49,8 @@ namespace BT_MVC.Controllers
         // GET: Enrollments/Create
         public IActionResult Create()
         {
-            ViewData["CourseId"] = new SelectList(_context.Courses, "Id", "Id");
-            ViewData["StudentId"] = new SelectList(_context.Students, "Id", "Id");
+            ViewData["StudentId"] = new SelectList(_context.Students, "Id", "Name");
+            ViewData["CourseId"] = new SelectList(_context.Courses, "Id", "Title");
             return View();
         }
 
